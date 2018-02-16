@@ -1,0 +1,21 @@
+{
+  "name": "user-gui",
+  "description": "",
+  "main": "",
+  "authors": [
+    "Travis N. Thomsen <travis@linuxacademy.com"
+  ],
+  "license": "MIT",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "devDependencies": {
+    "bootstrap": "^4.0.0",
+    "jquery": "^3.3.1"
+  }
+}
