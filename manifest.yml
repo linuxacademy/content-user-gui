@@ -1,10 +1,8 @@
 applications:
-  - name: user-gui
+- name: user-gui-xxx
   memory: 512m
   disk_quota: 512m
   instances: 1
-  routes:
-    - route: route: user-gui.cfapps.io
   env:
-    API_URL: user-api.cfapps.io
+    API_URL: user-api-xxx.cfapps.io
     API_PORT: 3000
