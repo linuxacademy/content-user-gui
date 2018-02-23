@@ -12,13 +12,19 @@ router.get('/', function(req, res, next) {
   if (config.api_port != 80) {
     url += ':' + config.api_port
   }
+  url += '/users'
   console.log(url);
 
   request(url, { json: true }, (err, res2, body) => {
-    if (err) { return console.log(err); }
-    console.log(body);
+    console.log("request");
+    if (err) {
+      console.log(err);
+      res.status(404).send(err);
+    } else {
+      console.log(body);
 
-    res.render('index', body);
+      res.render('index', { "users": body });
+    }
   });
 });
 

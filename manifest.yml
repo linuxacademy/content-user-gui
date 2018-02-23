@@ -5,4 +5,4 @@ applications:
   instances: 1
   env:
     API_URL: user-api-xxx.cfapps.io
-    API_PORT: 3000
+    API_PORT: 80
