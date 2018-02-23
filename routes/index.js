@@ -7,12 +7,8 @@ var router = express.Router();
 router.get('/', function(req, res, next) {
   console.log("index page");
 
-  var url = 'http://' + config.api_url
-
-  if (config.api_port != 80) {
-    url += ':' + config.api_port
-  }
-  url += '/users'
+  var url = config.api_url + '/users'
+  
   console.log(url);
 
   request(url, { json: true }, (err, res2, body) => {
