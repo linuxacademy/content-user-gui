@@ -12,7 +12,7 @@ router.get('/', function(req, res, next) {
   if (config.api_port != 80) {
     url += ':' + config.api_port
   }
-  url += '/users'
+  //url += '/users'
   console.log(url);
 
   request(url, { json: true }, (err, res2, body) => {
@@ -23,7 +23,7 @@ router.get('/', function(req, res, next) {
     } else {
       console.log(body);
 
-      res.render('index', { "users": body });
+      res.render('index', body);
     }
   });
 });
