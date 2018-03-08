@@ -9,6 +9,7 @@ if (appEnv.isLocal) {
   uri = 'http://localhost:3000';
 } else {
   uri = appEnv.getServiceURL("user-api-service");
+  newrelic_license_key = appEnv.getServiceURL("newrelic");
 }
 
 module.exports = {
